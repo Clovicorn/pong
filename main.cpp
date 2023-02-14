@@ -40,11 +40,11 @@ int main(void)
             }
             if (event.type == Event::KeyPressed)
             {
-                if (Keyboard::isKeyPressed(Keyboard::A)) //  || Keyboard::isKeyPressed(Keyboard::A)
+                if ((event.key.code == Keyboard::A) || (event.key.code == Keyboard::Left))
                 {
                     bat.moveLeft();
                 }
-                else if (Keyboard::isKeyPressed(Keyboard::D)) //  || Keyboard::isKeyPressed(Keyboard::D)
+                else if ((event.key.code == Keyboard::D) || (event.key.code == Keyboard::Right))
                 {
                     bat.moveRight();
                 }
@@ -55,11 +55,11 @@ int main(void)
             }
             else if (event.type == Event::KeyReleased)
             {
-                if ((event.key.code == Keyboard::A)) //  || (event.key.code == Keyboard::A)
+                if ((event.key.code == Keyboard::A) || (event.key.code == Keyboard::Left))
                 {
                     bat.stopLeft();
                 }
-                else if ((event.key.code == Keyboard::D)) //  || (event.key.code == Keyboard::D)
+                else if ((event.key.code == Keyboard::D) || (event.key.code == Keyboard::Right))
                 {
                     bat.stopRight();
                 }
